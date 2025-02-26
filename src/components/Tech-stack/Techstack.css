@@ -1,0 +1,234 @@
+/* Techstack.css */
+.techstack-me {
+  
+  padding: 4rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.techstack-me-desc {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  width: 90%;
+  padding: 2rem;
+  position: relative;
+  margin: 0 auto;
+}
+
+.techstack-welcome {
+  background: rgba(136, 96, 208, 0.15);
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem;
+  position: absolute;
+  top: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  max-width: 240px;
+  width: 100%;
+  animation: certiBorderGlow 2s infinite alternate;
+  transition: all 0.3s ease-in-out;
+}
+
+.techstack-welcome h1 {
+  color: var(--primary);
+  font-size: clamp(1.25rem, 4vw, 1.5rem);
+  margin: 0;
+}
+
+.techstack-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  padding: 3rem 0;
+  place-items: center;
+}
+
+.circle-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(136, 96, 208, 0.1);
+  padding: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+h2 {
+  font-size: clamp(0.9rem, 3vw, 1.2rem);
+  color: var(--darkGray);
+  text-align: center;
+  margin: 0;
+}
+
+@media (hover: hover) {
+  .circle-parent:hover {
+    transform: scale(1.15) translateZ(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .techstack-me-desc {
+    padding: 1.5rem;
+  }
+  
+  .techstack-list {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .circle {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .techstack-list {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+  }
+
+  .circle {
+    width: 70px;
+    height: 70px;
+    padding: 0.8rem;
+  }
+}
+@keyframes certiBorderGlow {
+  0% {
+    box-shadow: 0 0 4px #8860d0, 0 0 8px #8860d0, 0 0 12px #8860d0;
+    border-color: #8860d0;
+  }
+  50% {
+    box-shadow: 0 0 6px #8860d0, 0 0 10px #8860d0, 0 0 15px #8860d0;
+    border-color: #8860d0;
+  }
+  100% {
+    box-shadow: 0 0 4px #8860d0, 0 0 8px #8860d0, 0 0 12px #8860d0;
+    border-color: #8860d0;
+  }
+}
+.marquee-container {
+  overflow: hidden;
+  width: 100%;
+  padding: 2rem 0;
+  position: relative;
+}
+
+/* Fade effect gradients */
+.marquee-container::before,
+.marquee-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.marquee-container::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+.marquee-container::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+.marquee-wrapper {
+  display: flex;
+  width: fit-content;
+}
+
+.marquee-content {
+  display: flex;
+  align-items: center;
+  animation: scroll 20s linear infinite;
+  gap: 3rem;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Add fade-in animation to items */
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  min-width: 120px;
+  transition: all 0.3s ease;
+  opacity: 0.8;
+  filter: grayscale(30%);
+}
+
+.tech-item:hover {
+  transform: scale(1.05);
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+.tech-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 12px;
+  transition: transform 0.3s ease;
+}
+
+.tech-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.tech-name {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+  text-align: center;
+  white-space: normal;
+  transition: color 0.3s ease;
+}
+
+/* Hover effects */
+.tech-item:hover .tech-circle {
+  transform: rotate(15deg);
+}
+
+.tech-item:hover .tech-name {
+  color: #333;
+}

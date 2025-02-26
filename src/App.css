@@ -1,0 +1,21 @@
+.app-container {
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  .app-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://media.istockphoto.com/id/1409540606/vector/vector-contact-us-pattern-contact-us-seamless-background.jpg?s=2048x2048&w=is&k=20&c=iNxkUu9DgREQBQkGsUF0vk7TRG-3gPbDsxEqB6dRRWk=');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: .1; /* Set the opacity to 10% */
+    z-index: -1;
+  }
+  

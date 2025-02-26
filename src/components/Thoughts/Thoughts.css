@@ -1,0 +1,106 @@
+/* Thoughts.css */
+.thought-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.thought-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.ps-box {
+  background-image: linear-gradient(to bottom right, white, #e5e7eb);
+  border: 2px solid gray;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.ps-box h2 {
+  color: var(--darkGray);
+  font-size: clamp(1.25rem, 4vw, 1.5rem);
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.ps-box p {
+  color: #555;
+  font-size: clamp(1rem, 3vw, 1.1rem);
+  line-height: 1.6;
+}
+
+.medium {
+  background-image: linear-gradient(to bottom right, #000, #272727);
+  cursor: pointer;
+}
+
+.medium h2 {
+  color: var(--background);
+}
+
+.medium p {
+  color: #d2d0d0;
+}
+
+.my-thought {
+  background-image: linear-gradient(to bottom right, #431891, #8860d0);
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.my-thought h1 {
+  color: var(--white);
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: center;
+}
+
+@media (hover: hover) {
+  .medium:hover {
+    background-image: linear-gradient(to bottom right, #431891, #8860d0);
+    transform: translateY(-5px);
+  }
+  
+  .my-thought:hover {
+    transform: scale(1.02);
+  }
+}
+
+@media (min-width: 768px) {
+  .thought-container {
+    flex-direction: row;
+    padding: 2rem;
+  }
+  
+  .thought-left {
+    flex: 1;
+    max-width: 40%;
+  }
+  
+  .my-thought {
+    flex: 2;
+    margin-left: 2rem;
+    padding: 2rem 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .ps-box {
+    padding: 2rem;
+    min-height: 200px;
+  }
+  
+  .my-thought {
+    padding: 3rem 5rem;
+  }
+}

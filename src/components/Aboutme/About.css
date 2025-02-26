@@ -1,0 +1,141 @@
+/* About.css */
+.about-me {
+  background-color: white;
+  padding: 4rem 1rem;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.about-me-desc {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  width: 90%;
+  padding: 2rem;
+  position: relative;
+  margin: 0 auto;
+  
+}
+
+.about-welcome {
+  background-color: rgba(136, 96, 208, 0.15);
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem;
+  position: absolute;
+  top: -2rem;
+  right: 1rem;
+  text-align: center;
+  width: fit-content;
+  border: 1px solid #00bcd4;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 0 10px #00bcd4, 0 0 20px #00bcd4, 0 0 30px #00bcd4;
+  animation: borderGlow 2s infinite alternate;
+  transition: all 0.3s ease-in-out;
+}
+
+.about-welcome h1 {
+  color: #8860d0;
+  font-size: clamp(1.25rem, 4vw, 1.5rem);
+  margin: 0;
+ 
+
+}
+
+.about-header {
+  font-size: clamp(2rem, 8vw, 3rem);
+  color: var(--black);
+  margin: 2rem 0 1rem;
+  line-height: 1.2;
+  font-weight:bold;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.para {
+  color: #444242;
+  font-size: clamp(1rem, 3vw, 1.1rem);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.download-btn {
+  background: #8860d0;
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: clamp(1rem, 3vw, 1.1rem);
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  transition: transform 0.2s ease;
+  width: fit-content;
+}
+
+.download-btn img {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+@media (hover: hover) {
+  .download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(136, 96, 208, 0.4);
+  }
+}
+
+@media (min-width: 768px) {
+  .about-me {
+    padding: 6rem 2rem;
+  }
+  
+  .about-me-desc {
+    padding: 3rem;
+  }
+  
+  .about-welcome {
+    top: -2.5rem;
+    right: 2rem;
+    padding: 1.25rem 2rem;
+  }
+  
+  .content {
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-me-desc {
+    padding: 4rem;
+  }
+  
+  .para {
+    font-size: 1.1rem;
+  }
+}
+@keyframes borderGlow {
+  0% {
+    box-shadow: 0 0 4px #8860d0, 0 0 8px #8860d0, 0 0 12px #8860d0;
+    border-color: #8860d0;
+  }
+  50% {
+    box-shadow: 0 0 6px #8860d0, 0 0 10px #8860d0, 0 0 15px #8860d0;
+    border-color: #8860d0;
+  }
+  100% {
+    box-shadow: 0 0 4px #8860d0, 0 0 8px #8860d0, 0 0 12px #8860d0;
+    border-color: #8860d0;
+  }
+}
+
+
+
