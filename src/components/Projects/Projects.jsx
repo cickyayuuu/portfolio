@@ -6,21 +6,23 @@ const Projects = () => {
     {
       title: 'CodePencil Online code editor',
       image: 'https://media.istockphoto.com/id/887814862/vector/web-design-browser.jpg?s=612x612&w=0&k=20&c=rRNW4h-qjNv3OzhnYFrx03MfBQCwGreRsJsjx_-Kp-Q=',
-      link: 'https://www.futurelearn.com/certificates/jk0rxoi',
-      description: 'User experience, known as UX, makes a huge difference to whether a digital product or project succeeds...'
+      link: 'https://github.com/cickyayuuu/codeplayground',
+      description: 'A real-time online code editor for HTML, CSS, and JavaScript with collaborative editing using WebSockets, enabling multiple users to code together seamlessly.'
     },
     {
-      title: 'AI Trip Planner and booking management',
-      image: '/aitrip.png',
-      link: 'https://www.hackerrank.com/certificates/8f38881809e2',
-      description: 'AI trip planner: Personalizes itineraries using preferences/budget, automates bookings, and provides real-time updates for efficient travel planning.'
-    },{
-      title: 'Portfolio',
-      image: '/portfolio.png',
-      link: 'https://www.hackerrank.com/certificates/8f38881809e2',
-      description: 'Hehe, This is the website that you are currently on! My personal website built with React and designed on Figma by me.'
+      title: 'Blogify',
+      image: '/Blog.png',
+      link: 'https://github.com/cickyayuuu/Blogify',
+      description: 'A full-stack blog platform where users can write, edit, and manage posts with a clean UI and Markdown support.'
+    },
+    {
+      title: 'MockWise',
+      image: '/mock.png',
+      link: 'https://vicky-mockwise.vercel.app/',
+      description: 'An online mock interview platform that helps users practice interviews with realistic questions and AI-powered feedback.'
     }
   ];
+  
 
   return (
     <section className='projects'>
